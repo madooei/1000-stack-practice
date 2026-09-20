@@ -23,45 +23,31 @@ public class LinkedMinStack implements MinStack {
 
   @Override
   public void push(Integer item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    Node newNode = new Node(item);
-    if (isEmpty() || item < head.minPointer.value) {
-      newNode.minPointer = newNode;  // the new item is the new minimum
-    } else {
-      newNode.minPointer = head.minPointer;
-    }
-    newNode.next = head;
-    head = newNode;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public void pop() {
-    if (isEmpty()) {
-      throw new NoSuchElementException();
-    }
-    head = head.next;  // unlink the old top; its minPointer leaves with it
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public Integer top() {
-    if (isEmpty()) {
-      throw new NoSuchElementException();
-    }
-    return head.value;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public Integer getMin() {
-    if (isEmpty()) {
-      throw new NoSuchElementException();
-    }
-    return head.minPointer.value;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean isEmpty() {
-    return head == null;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

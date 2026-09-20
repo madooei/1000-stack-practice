@@ -19,40 +19,26 @@ public class ArrayMonotonicStack {
   // Evicts every item strictly smaller than item, from the top down, then
   // places item on top. Throws IllegalArgumentException if item is null.
   public void push(Integer item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    while (size > 0 && arr[size - 1] < item) {
-      arr[size - 1] = null;  // evict the top, clearing the slot
-      size--;
-    }
-    if (size == arr.length) {
-      grow();
-    }
-    arr[size] = item;
-    size++;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Removes the top item. Throws NoSuchElementException if the stack is empty.
   public void pop() {
-    if (isEmpty()) {
-      throw new NoSuchElementException();
-    }
-    size--;
-    arr[size] = null;  // clear the slot so the object can be garbage collected
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the top item without removing it.
   // Throws NoSuchElementException if the stack is empty.
   public Integer top() {
-    if (isEmpty()) {
-      throw new NoSuchElementException();
-    }
-    return arr[size - 1];
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public boolean isEmpty() {
-    return size == 0;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   private void grow() {
