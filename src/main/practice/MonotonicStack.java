@@ -1,21 +1,23 @@
-package stack;
+package practice;
 
 import java.util.NoSuchElementException;
 
 /**
- * A Stack is a collection that supports last-in-first-out (LIFO) access.
- *
- * @param <T> the type of elements in this stack.
+ * A MonotonicStack is a stack of Integers whose values decrease from bottom to
+ * top, ties allowed. It has the same four operations as Stack, but push keeps
+ * a different promise: it evicts every item smaller than the new item before
+ * placing it on top. A MonotonicStack is therefore not a Stack.
  */
-public interface Stack<T> {
+public interface MonotonicStack {
 
   /**
-   * Pushes an item onto the top of this stack.
+   * Evicts every item strictly smaller than the given item, from the top down,
+   * then places the item on top of this stack.
    *
    * @param item the item to be pushed onto this stack.
    * @throws IllegalArgumentException if the item is null.
    */
-  void push(T item);
+  void push(Integer item);
 
   /**
    * Removes the item at the top of this stack.
@@ -30,7 +32,7 @@ public interface Stack<T> {
    * @return the item at the top of this stack.
    * @throws NoSuchElementException if this stack is empty.
    */
-  T top();
+  Integer top();
 
   /**
    * Returns true if this stack contains no elements.

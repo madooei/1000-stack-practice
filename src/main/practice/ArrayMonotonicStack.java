@@ -2,11 +2,8 @@ package practice;
 
 import java.util.NoSuchElementException;
 
-/**
- * An array-backed monotonic stack of integers: the values decrease from bottom
- * to top, ties allowed.
- */
-public class ArrayMonotonicStack {
+/** An array-backed MonotonicStack. */
+public class ArrayMonotonicStack implements MonotonicStack {
 
   private Integer[] arr;  // the top is at index size - 1
   private int size;
@@ -16,26 +13,25 @@ public class ArrayMonotonicStack {
     size = 0;
   }
 
-  // Evicts every item strictly smaller than item, from the top down, then
-  // places item on top. Throws IllegalArgumentException if item is null.
+  @Override
   public void push(Integer item) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Removes the top item. Throws NoSuchElementException if the stack is empty.
+  @Override
   public void pop() {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Returns the top item without removing it.
-  // Throws NoSuchElementException if the stack is empty.
+  @Override
   public Integer top() {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
+  @Override
   public boolean isEmpty() {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
