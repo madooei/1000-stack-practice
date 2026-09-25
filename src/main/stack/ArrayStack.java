@@ -1,26 +1,28 @@
-package practice;
+package stack;
 
 import java.util.NoSuchElementException;
 
-/** An array-backed MonotonicStack. */
-public class ArrayMonotonicStack implements MonotonicStack {
+/**
+ * An array-backed implementation of the Stack ADT.
+ *
+ * @param <T> the type of elements in this stack.
+ */
+public class ArrayStack<T> implements Stack<T> {
 
-  private Integer[] arr;  // the top is at index size - 1
+  private T[] arr;   // the top is at index size - 1
   private int size;
 
-  public ArrayMonotonicStack() {
-    arr = new Integer[10];
+  // arr only ever holds T, so the cast is safe.
+  @SuppressWarnings("unchecked")
+  public ArrayStack() {
+    arr = (T[]) new Object[10];
     size = 0;
   }
 
   @Override
-  public void push(Integer item) {
+  public void push(T item) {
     if (item == null) {
       throw new IllegalArgumentException();
-    }
-    while (size > 0 && arr[size - 1] < item) {
-      arr[size - 1] = null;  // evict the top, clearing the slot
-      size--;
     }
     if (size == arr.length) {
       grow();
@@ -39,7 +41,7 @@ public class ArrayMonotonicStack implements MonotonicStack {
   }
 
   @Override
-  public Integer top() {
+  public T top() {
     if (isEmpty()) {
       throw new NoSuchElementException();
     }
@@ -51,8 +53,10 @@ public class ArrayMonotonicStack implements MonotonicStack {
     return size == 0;
   }
 
+  // Doubles the capacity. Same cast rationale as the constructor.
+  @SuppressWarnings("unchecked")
   private void grow() {
-    Integer[] bigger = new Integer[arr.length * 2];
+    T[] bigger = (T[]) new Object[arr.length * 2];
     for (int i = 0; i < size; i++) {
       bigger[i] = arr[i];
     }
