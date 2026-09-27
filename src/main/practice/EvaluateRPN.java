@@ -27,10 +27,8 @@ public final class EvaluateRPN {
   // Removes list[index] from the first size elements of list and returns the
   // new size. Pre: 0 <= index < size.
   private static int removeAt(String[] list, int size, int index) {
-    for (int k = index; k < size - 1; k++) {
-      list[k] = list[k + 1];
-    }
-    return size - 1;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns true if the token is one of the four operators.
