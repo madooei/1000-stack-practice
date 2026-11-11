@@ -5,6 +5,6 @@ public class EvaluateRPNStackTest extends EvaluateRPNTest {
 
   @Override
   protected int evalRPN(String[] tokens) {
-    return EvaluateRPN.evalRPN(tokens);
+    return EvaluateRPNStack.evalRPN(tokens);
   }
 }

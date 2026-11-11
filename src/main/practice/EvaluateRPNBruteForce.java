@@ -1,40 +1,15 @@
 package practice;
 
-import stack.ArrayStack;
-import stack.Stack;
+/** Practice problem: evaluate an RPN expression by reducing the first operator. */
+public final class EvaluateRPNBruteForce {
 
-/** Solutions to the Evaluate Reverse Polish Notation problem. */
-public final class EvaluateRPN {
-
-  private EvaluateRPN() {
+  private EvaluateRPNBruteForce() {
     // This class should not be instantiated!
   }
 
   // Returns the value of the expression. Assumes tokens is a valid RPN
   // expression: each token is an integer or one of the operators +, -, *, /.
   public static int evalRPN(String[] tokens) {
-    Stack<Integer> stack = new ArrayStack<>();
-
-    for (int i = 0; i < tokens.length; i++) {
-      String token = tokens[i];
-
-      if (isOperator(token)) {
-        int b = stack.top();  // the most recent number is the second operand
-        stack.pop();
-        int a = stack.top();
-        stack.pop();
-        stack.push(apply(token, a, b));
-      } else {
-        stack.push(Integer.parseInt(token));
-      }
-    }
-
-    return stack.top();
-  }
-
-  // The brute-force solution. Returns the value of the expression. Assumes
-  // tokens is a valid RPN expression, as for evalRPN.
-  public static int evalRPNBruteForce(String[] tokens) {
     String[] list = new String[tokens.length];
     int size = tokens.length;
     for (int i = 0; i < tokens.length; i++) {
