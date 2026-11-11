@@ -5,6 +5,6 @@ public class EvaluateRPNBruteForceTest extends EvaluateRPNTest {
 
   @Override
   protected int evalRPN(String[] tokens) {
-    return EvaluateRPN.evalRPNBruteForce(tokens);
+    return EvaluateRPNBruteForce.evalRPN(tokens);
   }
 }

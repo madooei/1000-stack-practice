@@ -3,10 +3,10 @@ package practice;
 import stack.LinkedStack;
 import stack.Stack;
 
-/** Solutions to the valid-parentheses problem. */
-public final class ValidParentheses {
+/** Practice problem: check that brackets are balanced by matching them with a stack. */
+public final class ValidParenthesesStack {
 
-  private ValidParentheses() {
+  private ValidParenthesesStack() {
     // This class should not be instantiated!
   }
 
@@ -21,11 +21,5 @@ public final class ValidParentheses {
     return (open == '(' && close == ')')
         || (open == '[' && close == ']')
         || (open == '{' && close == '}');
-  }
-
-  // The brute-force solution. Returns true if s is valid. Assumes s contains only the characters ()[]{}.
-  public static boolean isValidBruteForce(String s) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

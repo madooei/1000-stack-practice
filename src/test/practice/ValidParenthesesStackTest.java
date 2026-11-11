@@ -5,6 +5,6 @@ public class ValidParenthesesStackTest extends ValidParenthesesTest {
 
   @Override
   protected boolean isValid(String s) {
-    return ValidParentheses.isValid(s);
+    return ValidParenthesesStack.isValid(s);
   }
 }

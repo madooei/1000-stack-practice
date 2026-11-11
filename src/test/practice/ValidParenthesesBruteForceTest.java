@@ -5,6 +5,6 @@ public class ValidParenthesesBruteForceTest extends ValidParenthesesTest {
 
   @Override
   protected boolean isValid(String s) {
-    return ValidParentheses.isValidBruteForce(s);
+    return ValidParenthesesBruteForce.isValid(s);
   }
 }
