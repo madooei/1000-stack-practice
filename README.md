@@ -60,7 +60,7 @@ code/
 - `scripts/test.sh practice.ValidParenthesesBruteForceTest` — compiles everything and runs only that test class. Use this while you are working on one problem or one solution and the others are still empty. The class names are listed in the layout above.
 - `scripts/run.sh demo.ValidParenthesesStackDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `stack.Stack<T>` — an unchanged copy of the chapter's `Stack` interface. `MinStack` extends it, so it is included here to keep this code self-contained.
 - `stack.ArrayStack<T>` and `stack.LinkedStack<T>` — complete copies of the chapter's two implementations. The stack solutions to valid parentheses and Reverse Polish Notation use them, not `java.util` collections.
