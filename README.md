@@ -30,6 +30,13 @@ code/
         LinkedMinStack.java              # linked MinStack (per-node minPointer)
         MonotonicStack.java              # push evicts smaller elements (not a Stack)
         ArrayMonotonicStack.java         # array-backed MonotonicStack
+      demo/                              # one demo per solution class
+        ValidParenthesesBruteForceDemo.java
+        ValidParenthesesStackDemo.java
+        EvaluateRPNBruteForceDemo.java
+        EvaluateRPNStackDemo.java
+        LinkedMinStackDemo.java
+        ArrayMonotonicStackDemo.java
     test/
       practice/
         ValidParenthesesTest.java            # abstract: the valid-parentheses scenarios
@@ -44,14 +51,14 @@ code/
         ArrayMonotonicStackTest.java  # runs the suite against ArrayMonotonicStack
   scripts/
     test.sh                        # compile and run every JUnit test
+    run.sh                         # compile and run one demo
 ```
 
 ## How to compile and run
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh practice.ValidParenthesesBruteForceTest` — compiles everything and runs only that test class. Use this while you are working on one problem or one solution and the others are still empty. The class names are listed in the layout above.
-
-There is no demo program for these problems; the tests are how you check your work.
+- `scripts/run.sh demo.ValidParenthesesStackDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
 ## What's here
 
@@ -68,3 +75,4 @@ There is no demo program for these problems; the tests are how you check your wo
 - `practice.ArrayMonotonicStack` — an array-backed `MonotonicStack`.
 - `practice.MinStackTest` and `practice.LinkedMinStackTest` — the `MinStack` contract suite and the class that runs it against `LinkedMinStack`.
 - `practice.MonotonicStackTest` and `practice.ArrayMonotonicStackTest` — the `MonotonicStack` contract suite and the class that runs it against `ArrayMonotonicStack`.
+- `demo.ValidParenthesesBruteForceDemo`, `demo.ValidParenthesesStackDemo`, `demo.EvaluateRPNBruteForceDemo`, `demo.EvaluateRPNStackDemo`, `demo.LinkedMinStackDemo`, and `demo.ArrayMonotonicStackDemo` — one demo per solution class, each on an example from the notes.
